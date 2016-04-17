@@ -1,0 +1,52 @@
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dashboard</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="" ng-click="clearNotifications();">Notifications <span class="bubble" ng-if="count">{{count}}</span></a></li>
+            <li><a href="#/login">Logout</a></li>
+          </ul>
+          </div>
+      </div>
+    </nav>
+    <br><br><br>
+    <div class="col-sm-12 col-md-12 main">
+    </div>
+          <div class="row">
+          <div class="col-sm-3">
+            <div class="panel panel-default">
+              <div class="panel-heading"><b>Sensor</b></div>
+              <div class="panel-body">
+                  <label for="switch" >Setup:</label>
+                  <div toggle-switch class="switch-primary" ng-model="switchStatus" id="switch" class="switch-success switch-large" knob-label="sensors" ng-change="sendState(switchStatus);">
+                  </div><br><br>
+                  <form>
+                    <label for="rng">Senor Range Threshold:</label>      
+                    <input type="range" min="0" max="100" ng-model="thrs.thrs" /><br>
+                    <input type="number" min="0" ng-model="thrs.thrs" size="20" id="rng"
+        />
+                    <button type="submit" class="btn btn-primary btn-sm" ng-click="sendVal()">Update</button>
+                    <br/>
+                  </form>
+                  <label for="switch" >Data:</label>
+                  <div class="sensorDisplay">
+            Distance Sensor: <span>{{distData}}</span>
+            <br/>
+            Light Sensor: <span>{{lightData}}</span>
+              </div>
+              </div>
+          </div>
+          </div>
+          <div class="col-sm-9">
+            <iframe src="http://54.153.69.222:5601/" width="960" height="300"></iframe>
+          </div>
+      </div>             
+    </div>
