@@ -8,8 +8,8 @@
     var mqtt    = require('mqtt');
 
 
-    //var client = mqtt.connect({ host: 'ec2-52-8-86-138.us-west-1.compute.amazonaws.com', port: 1883 });
     var client = mqtt.connect({ host: '54.153.111.104', port: 1883 });
+    //var client = mqtt.connect({ host: '52.26.17.88', port: 1883 });
     client.subscribe('sensorData');
     client.subscribe('State');
     client.subscribe('Notification');
@@ -28,6 +28,7 @@
     //var notify = {"NotifyCount": 0, "NotifyVal": []};
 
     client.on('message', function(topic, message, packet) {
+            console.log("message : " + message);
             if(topic == "sensorData")
             {
                 msg = message;

@@ -88,10 +88,14 @@ sensor.controller('mainController', function ($scope, $http, Notification, $inte
         .success(function(response) {
           //console.log("I have met the client")
           $scope.sensorData = response;
-           $scope.distData = $scope.sensorData.Distance;
-           
-           $scope.lightData = $scope.sensorData.Light;
-        
+           $scope.distData = ($scope.sensorData.Distance / 100).toFixed(2);
+           //console.log("Light data " + $scope.sensorData.Light)
+          if($scope.sensorData.Light < 255 && $scope.sensorData.Light >=0){
+            $scope.lightData = ((255 - $scope.sensorData.Light) * 100 / 255).toFixed(2);
+           }
+           else if($scope.sensorData.Light > 255 || $scope.sensorData.Light < 0) {
+            $scope.lightData = 0;
+          }               
         })
         .error(function(data) {
             console.log('Error: ' + data);
@@ -102,7 +106,7 @@ sensor.controller('mainController', function ($scope, $http, Notification, $inte
   });
     
     function Threshold(current) {
-    var thrs = current;
+    var thrs = current * 100;
 
     this.__defineGetter__("thrs", function () {
         return thrs;

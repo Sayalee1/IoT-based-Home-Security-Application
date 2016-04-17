@@ -29,8 +29,8 @@
                   <div toggle-switch class="switch-primary" ng-model="switchStatus" id="switch" class="switch-success switch-large" knob-label="sensors" ng-change="sendState(switchStatus);">
                   </div><br><br>
                   <form>
-                    <label for="rng">Senor Range Threshold:</label>      
-                    <input type="range" min="0" max="100" ng-model="thrs.thrs" /><br>
+                    <label for="rng">Senor Range Threshold (metres):</label>      
+                    <input type="range" min="0" max="25" ng-model="thrs.thrs" /><br>
                     <input type="number" min="0" ng-model="thrs.thrs" size="20" id="rng"
         />
                     <button type="submit" class="btn btn-primary btn-sm" ng-click="sendVal()">Update</button>
@@ -38,15 +38,15 @@
                   </form>
                   <label for="switch" >Data:</label>
                   <div class="sensorDisplay">
-            Distance Sensor: <span>{{distData}}</span>
+            Distance Sensor: <span>{{distData}}</span> metres
             <br/>
-            Light Sensor: <span>{{lightData}}</span>
+            Light Sensor: <span>{{lightData}}</span> %
               </div>
               </div>
           </div>
           </div>
           <div class="col-sm-9">
-            <iframe src="http://54.153.69.222:5601/" width="960" height="300"></iframe>
+                <iframe src="http://54.153.69.222:5601/goto/1b0df5f36782509d27eb886ea1b4b221" height="600" width="800"></iframe>
           </div>
       </div>             
     </div>
