@@ -1,0 +1,42 @@
+body {
+    background: #536678 ;
+    margin: 0;
+    padding: 0;
+}
+/*.panel-default {
+     background-color: #2B353E !important;
+}*/
+
+.login{
+	 position: absolute;
+  margin: auto;
+  top: 10;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 3px;
+	}
+
+  p {font-family: sans-serif; font-size: 14px; line-height: 20px;}
+  .bubble {
+    background: red;
+    color: white;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+growl-notifications{
+  position: fixed;
+  top: 150px;
+  right: 10px;
+}
+growl-notification{
+  border: 1px solid black;
+  padding: 15px 30px;
+  margin-bottom: 15px;
+}

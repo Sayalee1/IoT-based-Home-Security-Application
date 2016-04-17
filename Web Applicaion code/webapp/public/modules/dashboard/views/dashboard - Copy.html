@@ -1,0 +1,83 @@
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">296A Assignment 2</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="" ng-click="clearNotifications();">Notifications <span class="bubble" ng-if="count">{{count}}</span></a></li>
+            <li><a href="#/login">Logout</a></li>
+          </ul>
+          </div>
+      </div>
+    </nav>
+    <br>
+    <div class="col-sm-12 col-md-12 main">
+          <h1 class="page-header text-success">Dashboard</h1>
+          <div class="row">
+          <div class="col-sm-8 text-muted">
+          <div class="panel panel-default">
+          <div class="panel-heading text-muted"><b>Kibana Dashboard</b></div>
+            <div class="panel-body">
+              <div class="row placeholders">
+                    <iframe src="http://54.153.69.222:5601/goto/d9145bd10d974054f9dece30709134e6" height="400" width="800"></iframe>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          <div class="col-sm-4 text-muted">
+            <div class="panel panel-default">
+              <div class="panel-heading"><b>Sensor Settings</b></div>
+              <div class="panel-body">
+                  <label for="switch" >Sensor Setup:</label>
+                  <div toggle-switch class="switch-success" ng-model="switchStatus" id="switch" class="switch-success switch-large" ng-change="sendState(switchStatus);">
+                  </div><br><br>
+                  <form>
+                    <label for="rng" class="text-muted">Senor Range Threshold (metres):</label>      
+                    <input type="range" min="0" max="25" ng-model="thrs.thrs" /><br>
+                    <input type="number" min="0" ng-model="thrs.thrs" size="20" id="rng"
+        />
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="sendVal()">Update</button>
+                    <br/>
+                  </form>
+              </div>
+          </div>
+          </div>
+          <div class="col-sm-4 text-muted">
+          <div class="panel panel-default">
+          <div class="panel-heading text-muted"><b>Sensor Data</b></div>
+          <div class="panel-body">
+<!--             <div class="sensorDisplay">
+ --><!--               <div>
+              <label for="one" >Distance Sensor (metres):</label>
+              <div class="c100 p100 green one center">
+              <span>{{distData}}</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            </div> -->
+<!--             <div>
+              <label for="two">Light Sensor (%):</label>
+              <div class="c100 p100 green two center">
+              <span>{{lightData}}</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+             </div>
+              </div> -->
+            </div>
+          </div>
+          </div>
+      </div>             
+    </div>
