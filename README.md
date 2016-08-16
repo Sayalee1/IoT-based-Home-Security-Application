@@ -1,9 +1,9 @@
 # IoT-based-Home-Security-Application
 Raspberry Pi - Proximity and light sensor setup :
-https://cloud.githubusercontent.com/assets/11401305/14591017/c60c5ace-04bd-11e6-97dd-0295d6415eac.jpg
+![alt tag](https://cloud.githubusercontent.com/assets/11401305/14591017/c60c5ace-04bd-11e6-97dd-0295d6415eac.jpg)
 
 Web Application Dashboard:
-https://cloud.githubusercontent.com/assets/11401305/14591022/d4546a04-04bd-11e6-80ee-b3b23f8ea629.png
+![alt tag](https://cloud.githubusercontent.com/assets/11401305/14591022/d4546a04-04bd-11e6-80ee-b3b23f8ea629.png)
 
 #About
 [Device] Night proximity sensor that:
